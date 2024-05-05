@@ -13,6 +13,12 @@ function BotsPage() {
     setArmy((army) => army.filter((it) => it.id !== bot.id));
   }
 
+  useEffect(() => {
+    fetch("http://localhost:3000/bots")
+      .then((res) => res.json())
+      .then((data) => setBots(data));
+  }, []);
+
   return (
     <div>BotsPage</div>
   )

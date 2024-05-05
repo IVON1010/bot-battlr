@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import YourBotArmy from "./YourBotArmy";
+import BotCollection from "./BotCollection";
 
 function BotsPage() {
-
   const [bots, setBots] = useState([]);
   const [army, setArmy] = useState([]);
 
@@ -12,15 +13,14 @@ function BotsPage() {
   function retire(bot) {
     setArmy((army) => army.filter((it) => it.id !== bot.id));
   }
-
   useEffect(() => {
-    fetch("http://localhost:3000/bots")
+    fetch("http://localhost:/bots")
       .then((res) => res.json())
       .then((data) => setBots(data));
   }, []);
 
   function handleDelete(bot) {
-    fetch(http://localhost:3000/bots/${bot.id}, {
+    fetch(`http://localhost:8002/bots/${bot.id}`, {
       method: "DELETE",
     }).then(() => {
       setBots((bots) => bots.filter((it) => it.id !== bot.id));

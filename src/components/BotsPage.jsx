@@ -15,13 +15,13 @@ function BotsPage() {
     setArmy((army) => army.filter((it) => it.id !== bot.id));
   }
   useEffect(() => {
-    fetch("http://localhost:3000/bots")
+    fetch("bot-battlr-beige-one.vercel.app")
       .then((res) => res.json())
       .then((data) => setBots(data));
   }, []);
 
   function handleDelete(bot) {
-    fetch(`http://localhost:3000/bots/${bot.id}`, {
+    fetch(`bot-battlr-beige-one.vercel.app/${bot.id}`, {
       method: "DELETE",
     }).then(() => {
       setBots((bots) => bots.filter((it) => it.id !== bot.id));

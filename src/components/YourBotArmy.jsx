@@ -1,6 +1,6 @@
 import BotCard from "./BotCard";
 
-unction YourBotArmy({ collection, clickHandler, handeleDelete }) {
+function YourBotArmy({ collection, clickHandler, handeleDelete }) {
 
   return (
     <div className="ui segment inverted olive bot-army bg-green-500">

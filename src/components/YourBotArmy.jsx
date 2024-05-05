@@ -15,3 +15,5 @@ function YourBotArmy({ collection, clickHandler, handeleDelete }) {
     </div>
   );
 }
+
+export default YourBotArmy;

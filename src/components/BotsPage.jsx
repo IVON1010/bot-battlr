@@ -28,9 +28,13 @@ function BotsPage() {
     });
   }
 
+  function deleteHandler() {}
   return (
-    <div>BotsPage</div>
-  )
+    <div>
+      <YourBotArmy collection={army} clickHandler={retire} handleDelete={handleDelete} />
+      <BotCollection collection={bots} clickHandler={enlist} handleDelete={handleDelete} />
+    </div>
+  );
 }
 
-export default BotsPage
+export default BotsPage;

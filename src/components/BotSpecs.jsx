@@ -1,3 +1,5 @@
+
+
 const botTypeClasses = {
   Assault: "icon military",
   Defender: "icon shield",

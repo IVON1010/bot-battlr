@@ -13,7 +13,7 @@ const botTypeClasses = {
 function BotCard({ bot, clickHandler, handleDelete }) {
   return (
     <div className="ui column flex items-stretch ...">
-      <div className="ui card" key={bot.id} onClick={() => clickHandler(bot)}>
+      <div className="ui card grid grid-cols-4 gap-5" key={bot.id} onClick={() => clickHandler(bot)}>
         <div className="image ">
           <img alt="oh no!" src={bot.avatar_url} />
         </div>

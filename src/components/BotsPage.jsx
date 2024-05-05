@@ -9,6 +9,9 @@ function BotsPage() {
     if (army.includes(bot)) return;
     setArmy((army) => [...army, bot]);
   }
+  function retire(bot) {
+    setArmy((army) => army.filter((it) => it.id !== bot.id));
+  }
 
   return (
     <div>BotsPage</div>
